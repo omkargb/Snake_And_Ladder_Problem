@@ -8,11 +8,11 @@ namespace SnakeLadderProblem
     {
         public void player()
         {
-            int playerPosition = 0;
+            int playerPosition = 0, counter = 0;
             Random random = new Random();
-
             while (playerPosition < 100)
             {
+                counter++;
                 int diceValue = random.Next(1, 7);     // generates between 1 to 6
                 Console.Write(" Rolling a die... Die Value is : " + diceValue);
 
@@ -53,6 +53,7 @@ namespace SnakeLadderProblem
                     Console.WriteLine(" Winning position reached..");
                 }
             }
+            Console.WriteLine(" Number of times a Die was rolled : " +counter) ;
         }
     }
 }
